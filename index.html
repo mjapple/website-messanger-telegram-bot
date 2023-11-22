@@ -1,0 +1,566 @@
+<!-- Start Chat Button -->
+<div id="ghalebeAsli">
+    <div id="open-chat-btn" style="display: block;">
+    <button id="shirini" class="Shirini_esm_makan"></button>
+    <button id="shirini-loaded" class="Shirini_esm_makan" style="display: none;"></button>
+    <div autocomplete="off" id="displayform" class="footer">
+        <input type="text" id="messageInput_mj_display" class="Shirini_esm_makan input-element" name="message-input" placeholder="Chat with us now...">
+        <button id="container_TFI_chat_button" class="container_TFI_chat_button" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <!-- Chat Container -->
+  <div id="container_TFI_chat" class="zMJApple  container_TFI_chat" style="display: none;">  
+    <div id="open-chat-area">
+      <div class="top-header">
+          <h1 class="chat_title_">TFI Co. Chat</h1>
+          <span class="close-icon" id="close-icon"><i class="fa fa-times" aria-hidden="true"></i></span>
+      </div> 
+      <div id="name__place__" class="Shirini_esm_makan name-ask"></div>
+      <div id="chatArea" class="message_viewer_TFI amirclass" >
+          
+      </div>
+      <div class="footer-container">
+          <form autocomplete="off" id="chatForm" class="footer">
+            <input type="text" id="messageInput_mj" class="message_input_class input-element" name="message-input" placeholder="Chat with us now...">
+            <button id="container_TFI_chat_button" class="container_TFI_chat_button" id="sendButton" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+          </form>
+      </div>
+    </div>
+  </div>
+</div> 
+<style>
+  /* Import Quick Sand font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+.name-form {
+    align-content: center;
+    justify-content: center;
+}
+#ghalebeAsli {
+    height: 43px !important;
+    width: 341px !important;
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 2147483647 !important;
+    border-radius: 9px !important;
+     background: var(--tfiaccent-color) !important; 
+    box-sizing: content-box !important;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 30px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease-out !important;
+    transition: all 0.3s ease-out !important;
+    animation: borderDrip 4s linear infinite;
+}
+
+#open-chat-btn{
+    width: 100%; /* Set the container to full width */
+    height: 100vh; /* Set the container to full viewport height */
+    display: flex; /* Make the container a flex container */
+    justify-content: space-between; /* Space between children (input and button) */
+    align-items: center; /* Center children vertically */
+    padding: 1%; /* Add a 2% padding to create a gap */
+    box-sizing: border-box; /* Include padding and border in the total width/height */
+}
+button#shirini {
+    margin-top: -7px;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #e7e7e70d !important;
+    border: none !important;
+    border-radius: 9px !important;
+    outline: none !important;
+    z-index: 99999;
+    font-family: "QUICKSAND";
+}
+button#shirini-loaded {
+    margin-top: -7px;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #e7e7e70d !important;
+    border: none !important;
+    border-radius: 9px !important;
+    outline: none !important;
+    z-index: 99999;
+    font-family: "QUICKSAND";
+}
+
+li.msg {color: #383838; font-weight: 500; letter-spacing: 0;word-wrap: break-word;font-size:14px !important; margin:0px !important;}
+div#displayform {
+    width: 100%; /* Set the container to full width */
+    height: 100vh; /* Set the container to full viewport height */
+    display: flex; /* Make the container a flex container */
+    justify-content: space-between; /* Space between children (input and button) */
+    align-items: center; /* Center children vertically */
+    padding: 2%; /* Add a 2% padding to create a gap */
+    box-sizing: border-box; /* Include padding and border in the total width/height */
+
+}
+div#chatform {
+    width: 100%; /* Set the container to full width */
+    height: 100vh; /* Set the container to full viewport height */
+    display: flex; /* Make the container a flex container */
+    justify-content: space-between; /* Space between children (input and button) */
+    align-items: center; /* Center children vertically */
+    padding: 2%; /* Add a 2% padding to create a gap */
+    box-sizing: border-box; /* Include padding and border in the total width/height */
+
+}
+.Charlie_class.new_new {
+    font-family: "Quicksand";
+}
+.top-header {
+    box-sizing: content-box !important;
+    background-color: var(--tfiaccent-color);
+    padding: 10px !important;
+    font-family: "Quicksand" !important;
+    font-size: 6px !important;
+    overflow: hidden !important;
+    height: 23px !important;
+    border-radius: 7px !important;
+    z-index: 999999999 !important;
+}
+.footer-container { 
+    height: 65px !important; 
+    max-height: 65px !important; 
+    min-height: 65px !important; 
+    background-color: var(--tfiaccent-color); 
+    border-radius: 7px !important; 
+}
+h1.chat_title_ {
+	margin-top: 6px;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    font-family: "Quicksand", Sans-serif !important;
+    line-height: 8px !important;
+    font-style: normal !important;
+    color: black !important;
+    padding-top: 1px;
+    padding-left: 7px;
+}
+
+
+button#openMassengerBtn {
+    width: 335px !important;
+    height: 45px !important;
+    position: absolute !important;
+    background: #33333300 !important;
+    border: none !important;
+    border-radius: 9px !important;
+    margin-top: 0px !important;
+    outline: none !important;
+}
+.error__error {
+    width: 335px !important;
+    height: 45px !important;
+    position: absolute !important;
+    background: #f20000ef !important;
+    border: none !important;
+    border-radius: 9px !important;
+    margin-top: 0px !important;
+    outline: none !important;
+    z-index: 98292839329;
+    margin-left:-2px;
+
+}
+.error_text__ {
+    font-family: "Quicksand";
+    font-size:15px; color: skyblue;
+    padding: 19%;
+}
+button#openMassengerBtnn {
+    width: 335px !important;
+    height: 45px !important;
+    position: absolute !important;
+    background: #33333300 !important;
+    border: none !important;
+    border-radius: 9px !important;
+    margin-top: 0px !important;
+}
+input#jayGahEsm {
+    height: 38px !important;
+}
+.mini-form input {
+    border-radius: 9px !important;
+    padding: 2px 2px 2px 9px !important;
+    margin: 0px !important;
+    /* height: 26px !important; */
+    border: solid 1px skyblue !important;
+    font-style: italic;
+    font-size: 14px !important;
+}
+button.Shirini_sabt_kon.Diane_class {
+    border-radius: 5px;
+    max-height: 39px;
+}
+
+  /* For the Cross Icon */
+  .close-icon {
+	color: black !important;
+    position: absolute !important;
+    top: 6px !important;
+    right: 19px !important;
+    cursor: pointer !important;
+    padding: 4px !important;
+    font-size: 15px !important;
+}
+  
+/* For the Chat Container */
+.message_viewer_TFI {
+    -ms-overflow-style: none !important;  /* Internet Explorer 10+ */
+    scrollbar-width: none !important;  /* Firefox */
+    z-index: 9999999999 !important;
+}
+#container_TFI_chat {
+    box-sizing: content-box !important;
+    z-index: 9999999998 !important;
+    -ms-overflow-style: none !important;  /* Internet Explorer 10+ */
+    scrollbar-width: none !important;  /* Firefox */
+    background: skyblue !important;
+    transition: all 0.3s ease-out !important; /* Slide down animation */
+}
+.message_viewer_TFI::-webkit-scrollbar { 
+    display: none !important;  /* Safari and Chrome */
+}
+#container_TFI_chat::-webkit-scrollbar { 
+    display: none !important;  /* Safari and Chrome */
+}
+li.msg {
+    list-style: none !important;
+}
+.op_name {
+    font-size: 0.95em !important;
+    margin-top: 5px !important;
+    color: gray !important;
+}
+.three3 {
+    background-color: #eee !important;
+    align-self: flex-end !important;
+}
+.two2 {
+    background-color: #f8f8f8 !important;
+    align-self: flex-start !important;
+}
+div#open-chat-area {
+    background-color: var(--tfisky-color); 
+}
+
+#container_TFI_chat_button {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center !important;
+    position: absolute;
+    width: 54px !important;
+    right: 1.5px;
+    bottom: 1.5px;
+    background-color: #ffffff00 !important;
+    /* background-color: var(--tfibutton-color) !important; */
+    color: #fff !important;
+    border: none !important;
+    cursor: pointer !important;
+    max-width: 7% !important;
+    border-radius: 7px !important;
+    outline: none !important;
+    /* margin-top: 3px; */
+    max-height: -webkit-fill-available;
+}
+
+/* Common styles for chat bubbles */
+.message-bubble {
+    font-family: 'Quicksand', sans-serif !important;
+    font-size: 14px !important;
+    max-width: 70% !important;
+    border-radius: 6px !important;
+    padding: 10px 15px !important;
+    margin-left: 4px !important;
+    /* height: calc(100% - 95px) !important; */
+    scroll-behavior: smooth !important;
+    transition: all 0.1s ease !important;
+    margin-right: 4px !important;
+    margin-bottom: 3px !important;
+    margin-top: 1px !important;
+    font-weight: 500 !important;
+}
+
+/* Visitor's chat bubble */
+.visitor {
+    font-family: 'Quicksand' !important;
+    font-weight: bold !important;
+    background-color: #d6d6d6 !important;
+    float: right !important;
+    clear: both !important;
+    border-radius: 7px !important;
+    padding: 11px !important;
+    margin-top: 5px !important;
+    margin-right: 6px !important;
+    list-style: none !important;
+}
+
+/* Operator's chat bubble */
+.operator {
+    font-family: 'Quicksand' !important;
+    font-weight: bold !important;
+    background-color: #d5ae2b !important;
+    float: left !important;
+    clear: both !important;
+    border-radius: 7px !important;
+    padding: 11px !important;
+    margin-top: 5px !important;
+    margin-left: 6px !important;
+    list-style: none !important;
+}
+.op_name {
+    display: none;
+}
+.message-viewer-bubbles {
+    border: 1px solid #ccc !important;
+    padding: 10px !important;
+    margin: 5px !important;
+    border-radius: 10px !important;
+    background-color: #f9f9f9 !important;
+    scroll-behavior: smooth !important;
+    list-style: none !important;
+}
+.name-ask {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background-color: rgba(128, 128, 128, 0.5) !important; /* Gray transparent layer */
+
+}
+.name-form {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+.name-input {
+    border: none !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
+    font-size: 16px !important;
+    width: 70% !important;
+}
+.submit-button {
+    align-items: center;
+justify-content: center !important;
+    width: 54px !important;
+    height: 54px !important;
+    border-radius: 50% !important;
+    background-color: var(--tfiaccent-color) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    cursor: pointer !important;
+    margin-left: 10px !important;
+}
+.submit-button i {
+    
+    color: white !important;
+    font-size: 24px !important;
+}
+button#send-button {
+    cursor: pointer !important;
+    padding: 14px 19px !important;
+    margin-top: 4px !important;
+    margin-left: 1px !important;
+}
+.send-btn-ctn {
+    height: 50px !important;
+    border-radius: 50% !important;
+    background-color: var(--tfibutton-color) !important;
+    color: #fff !important;
+    border: none !important;
+    cursor: pointer !important;
+    margin-left: 2% !important;
+}
+#initiate-button {
+    border: none !important;
+    -webkit-font-smoothing: antialiased !important;
+    -webkit-user-select: none !important;
+    user-select: none;
+    border-radius: 50% !important;
+    bottom: 10px !important; /* Updated padding from the bottom */
+    box-sizing: border-box !important;
+    color: rgb(255, 255, 255) !important;
+    cursor: pointer !important;
+    display: block !important;
+    font-family: Roboto, -apple-system, "apple color emoji", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+    font-size: 24px !important; /* Adjust the size as needed */
+    line-height: 54px !important; /* Center the icon vertically */
+    font-style: normal !important;
+    font-variant-caps: normal !important;
+    font-weight: 400 !important;
+    height: 54px !important;
+    right: 10px !important; /* Updated padding from the right */
+    letter-spacing: normal !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    pointer-events: all !important;
+    position: absolute !important; /* Position is absolute */
+    text-align: center !important;
+    text-indent: 0px !important;
+    text-shadow: none !important;
+    text-transform: none !important;
+    width: 54px !important;
+    word-spacing: 0px !important;
+    writing-mode: horizontal-tb !important;
+    --ripple-duration: .7s !important;
+    background-color: var(--tfiaccent-color) !important;
+    transition: all 0.5s ease !important; /* Smooth transition for all properties */
+}
+.container_TFI_chat {
+    overflow-y: scroll !important;
+    /* display: flex !important; */
+    flex-direction: column-reverse !important;
+    scroll-behavior: smooth !important;
+    padding-bottom: 7px !important;
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 341px !important;
+    height: 400px !important;
+    border-radius: 10px !important;
+    background-color: var(--tfiaccent-color) !important;
+    overflow: hidden !important;
+    /* display: none !important; */
+    transition: all 0.5s ease !important;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 30px !important;
+}
+.amirclass {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;    
+    background-color: skyblue !important;
+    height: 322.5px !important;
+    transition: scrollTop 0.3s ease-out 0.1s !important;
+    overflow-y: scroll !important;
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    scroll-behavior: smooth !important;
+    
+}
+.container_TFI_chat .header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px !important;
+    background-color: var(--tfiaccent-color) !important;
+    transition: all 0.5s ease !important; /* Smooth transition for all properties */
+
+}
+.container_TFI_chat .message_viewer_TFI {
+    overflow-y: auto !important;
+}
+.flex-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 5px !important;
+    padding: 2px 7px 2px 7px !important;
+    margin: 1px 0px 0px 1px !important;
+}
+.container_TFI_chat .footer {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding-right: 10px !important;
+    padding-top: 10px !important;
+    padding-left: 7px !important;
+}
+.container_TFI_chat textarea {
+    width: 79% !important;
+    border-radius: 7px !important;
+    padding: 10px !important;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .footer-container {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 42px !important;
+    max-height: 42px !important;
+    min-height: 42px !important;
+    background-color: var(--tfiaccent-color);
+    border-radius: 7px !important;
+    width: 100%;
+}
+    .amirclass {
+    height: calc(86vh - 100px) !important;}
+    .top-header {
+    height: 2.5vh !important}
+    /* Chat Container */
+    #container_TFI_chat {
+    width: calc(100% - 19px) !important;
+    height: calc(85vh - 14px) !important;
+    bottom: 20px !important;
+    right: 7px !important;
+}
+    #container_TFI_chat_button{
+    position: absolute;
+    max-height: -webkit-fill-available;
+    top: inherit;
+    bottom: 2px;
+    right: 1.5%;
+    max-width: min-content;
+}
+
+    }
+    .input-element {
+    box-sizing: border-box !important;
+    background-color: white !important;
+    color: black !important;
+    position: absolute;
+    max-width: 94% !important;
+    min-width: 98.5% !important;
+    min-height: 37px !important;
+    top: inherit;
+    bottom: 3px !important;
+    max-height: 38px;
+    font-size: 15px !important;
+    font-family: "Quicksand" !important;
+    margin-bottom: 0px !important;
+    border: 3.5px solid var(--tfiaccent-color) !important;
+    left: 2px !important;
+    z-index: 9999 !important;
+    border-radius: 7px !important;
+    padding-top: 2px !important;
+    padding-bottom: 3px !important;
+    padding-left: 10px !important;
+    padding-right: 5px !important;
+}
+
+/* Update the styles for the input elements using the class */
+.input-element {
+    max-width: 100%;
+}
+
+    /* Chat Title */
+    h1.chat_title_ {
+        box-sizing: content-box !important;
+        font-size: 18px !important; /* Increase font size for mobile */
+    }
+    /* Message bubbles */
+    .message-bubble {
+        font-size: 16px !important; /* Increase font size for better visibility on mobile */
+    }
+    /* Operator's Name */
+    .op_name {
+        font-size: 10px !important; /* Adjusted font size for mobile */
+    }
+
+    /* Textarea and Send Button in footer
+    .container_TFI_chat .footer {
+        padding: 7px !important; /* 7px padding for mobile 
+    } */
+    .container_TFI_chat textarea {
+        width: calc(70% - 14px) !important; /* Adjust width for mobile */
+    }
+</style>
+
